@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
+
+const reelRoutes = require("./routes/reelRoutes");
 const db = require("./config/db");
 
 const dotenv = require("dotenv").config();
@@ -21,6 +23,7 @@ db();
 // routes
 app.use("/api/v1", userRoutes);
 app.use("/api/v1/posts", postRoutes);
+app.use("/api/v1/reel", reelRoutes);
 
 // listener
 app.listen(PORT, console.log(`Server running on port: ${PORT}`));
