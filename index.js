@@ -21,6 +21,9 @@ app.use(cors());
 db();
 
 // routes
+app.get("/", (req, res) => {
+  res.json({ message: "API working" });
+});
 app.use("/api/v1", userRoutes);
 app.use("/api/v1/posts", postRoutes);
 app.use("/api/v1/reel", reelRoutes);
