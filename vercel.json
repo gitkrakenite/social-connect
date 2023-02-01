@@ -2,5 +2,11 @@
   "version": 2,
   "name": "social-connect",
   "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+  "headers": [
+    {
+      "key": "access-control-allow-origin",
+      "value": "*"
+    }
+  ]
 }
